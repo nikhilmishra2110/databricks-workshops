@@ -28,11 +28,11 @@ Suggested values:
 
 ```text
 catalog: workshop
-schema: southern_glaciers
-pipeline: sg_account_intelligence_pipeline
-genie_space: SG Account Intelligence
-mlflow_experiment: /Shared/sg_account_intelligence
-lakebase_project: sg-account-actions
+schema: beverage_distribution
+pipeline: beverage_account_intelligence_pipeline
+genie_space: Beverage Account Intelligence
+mlflow_experiment: /Shared/beverage_account_intelligence
+lakebase_project: beverage-account-actions
 ```
 
 ## Skills Setup

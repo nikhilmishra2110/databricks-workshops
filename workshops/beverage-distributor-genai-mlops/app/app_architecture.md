@@ -6,9 +6,9 @@ Show how a Databricks App can combine governed lakehouse analytics with Lakebase
 
 ## Reads From Unity Catalog
 
-- `workshop.southern_glaciers.gold_account_intelligence`
-- `workshop.southern_glaciers.silver_account_orders`
-- `workshop.southern_glaciers.silver_inventory_position`
+- `workshop.beverage_distribution.gold_account_intelligence`
+- `workshop.beverage_distribution.silver_account_orders`
+- `workshop.beverage_distribution.silver_inventory_position`
 
 ## Writes To Lakebase
 

@@ -1,4 +1,4 @@
-# Prompt Pack: Southern Glaciers GenAI MLOps
+# Prompt Pack: Beverage Distribution GenAI MLOps
 
 Use these prompts in Databricks Genie Code. Ask for a plan first, then approve code or resource changes only after review.
 
@@ -7,7 +7,7 @@ Use these prompts in Databricks Genie Code. Ask for a plan first, then approve c
 ```text
 @lakehouse-data-generator
 
-I am building a Databricks workshop for a synthetic beverage distributor called Southern Glaciers.
+I am building a Databricks workshop for a synthetic beverage distributor.
 
 Use this domain:
 - accounts
@@ -19,7 +19,7 @@ Use this domain:
 
 Use Unity Catalog:
 - catalog: workshop
-- schema: southern_glaciers
+- schema: beverage_distribution
 
 Create synthetic data only. Do not use real customer names, people, addresses, emails, contracts, or credentials.
 
@@ -39,9 +39,9 @@ Wait for my approval before running any code.
 ```text
 @lakeflow-pipeline-builder
 
-Build a Lakeflow Spark Declarative Pipeline for the Southern Glaciers account intelligence workshop.
+Build a Lakeflow Spark Declarative Pipeline for the beverage distribution account intelligence workshop.
 
-Inputs are existing bronze tables in workshop.southern_glaciers:
+Inputs are existing bronze tables in workshop.beverage_distribution:
 - bronze_accounts
 - bronze_products
 - bronze_orders
@@ -66,12 +66,12 @@ Wait for approval before making changes.
 ```text
 @genie-space-optimizer
 
-Help me create and optimize a Databricks Genie space named "SG Account Intelligence".
+Help me create and optimize a Databricks Genie space named "Beverage Account Intelligence".
 
 Use only curated tables:
-- workshop.southern_glaciers.gold_account_intelligence
-- workshop.southern_glaciers.silver_account_orders
-- workshop.southern_glaciers.silver_inventory_position
+- workshop.beverage_distribution.gold_account_intelligence
+- workshop.beverage_distribution.silver_account_orders
+- workshop.beverage_distribution.silver_inventory_position
 
 Business users are sales leaders and field sales reps.
 
@@ -91,7 +91,7 @@ Keep the language business-friendly.
 ```text
 @mlflow-genai-evaluator
 
-Create an MLOps pattern for the Southern Glaciers account intelligence recommendation workflow.
+Create an MLOps pattern for the beverage distribution account intelligence recommendation workflow.
 
 The app should produce:
 - recommendation
@@ -111,7 +111,7 @@ Do not call external services unless I explicitly approve them.
 ```text
 @lakebase-app-builder
 
-Design a Databricks App backed by Lakebase for the Southern Glaciers account intelligence workflow.
+Design a Databricks App backed by Lakebase for the beverage distribution account intelligence workflow.
 
 Use Lakebase for operational state only:
 - saved account action plans
@@ -150,4 +150,3 @@ Focus on narrow skills:
 - MLflow GenAI evaluation
 - Lakebase app building
 ```
-

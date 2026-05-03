@@ -4,7 +4,7 @@ Reusable assets for planning and running Databricks customer workshops, with an 
 
 The first packaged workshop is:
 
-- `workshops/southern-glaciers-genai-mlops/`: a customer-facing GenAI + MLOps workshop for a beverage distribution use case.
+- `workshops/beverage-distributor-genai-mlops/`: a customer-facing GenAI + MLOps workshop for a beverage distribution use case.
 
 This repo stores:
 
@@ -21,7 +21,7 @@ This repo stores:
 |-- .assistant/skills/        # Genie Code skill examples
 |-- prompts/                 # Reusable prompt cards
 |-- workshops/_template/      # Copy this folder for each new workshop
-|-- workshops/southern.../    # Starter Databricks GenAI/MLOps workshop
+|-- workshops/beverage.../    # Starter Databricks GenAI/MLOps workshop
 |-- examples/intro-sql/       # Starter workshop with sample SQL assets
 |-- docs/                     # Operating model and design guidance
 |-- checklists/               # Repeatable planning and publishing checklists

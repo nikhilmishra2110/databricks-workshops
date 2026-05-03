@@ -4,7 +4,7 @@ workspace:
 
 unity_catalog:
   catalog: workshop
-  schema: southern_glaciers
+  schema: beverage_distribution
   volume: raw_workshop_files
 
 tables:
@@ -19,19 +19,19 @@ tables:
   gold_account_intelligence: gold_account_intelligence
 
 lakeflow:
-  pipeline_name: sg_account_intelligence_pipeline
-  target_schema: southern_glaciers
+  pipeline_name: beverage_account_intelligence_pipeline
+  target_schema: beverage_distribution
 
 genie:
-  space_name: SG Account Intelligence
+  space_name: Beverage Account Intelligence
   warehouse: replace_with_sql_warehouse_name
 
 mlflow:
-  experiment_name: /Shared/sg_account_intelligence
+  experiment_name: /Shared/beverage_account_intelligence
   registered_model_name: sg_reorder_risk
 
 lakebase:
-  project_name: sg-account-actions
+  project_name: beverage-account-actions
   branch_name: production
   database_name: databricks_postgres
   app_schema: account_actions

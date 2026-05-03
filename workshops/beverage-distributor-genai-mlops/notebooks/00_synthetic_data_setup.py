@@ -2,13 +2,13 @@
 # MAGIC %md
 # MAGIC # Synthetic Data Setup
 # MAGIC
-# MAGIC Creates small synthetic tables for the Southern Glaciers GenAI MLOps workshop.
+# MAGIC Creates small synthetic tables for the Beverage Distribution GenAI MLOps workshop.
 # MAGIC Use synthetic data only.
 
 # COMMAND ----------
 
 dbutils.widgets.text("catalog", "workshop")
-dbutils.widgets.text("schema", "southern_glaciers")
+dbutils.widgets.text("schema", "beverage_distribution")
 
 catalog = dbutils.widgets.get("catalog")
 schema = dbutils.widgets.get("schema")
@@ -89,4 +89,3 @@ for table_name, comment in comments.items():
 
 for table_name in comments:
     display(spark.sql(f"SELECT '{table_name}' AS table_name, COUNT(*) AS rows FROM {table_name}"))
-

@@ -1,5 +1,5 @@
 domain: beverage_distribution
-customer_label: Southern Glaciers
+customer_label: replace_with_customer_name
 data_policy: synthetic_only
 
 entities:
@@ -73,4 +73,3 @@ quality_rules:
   - net_amount must be less than or equal to gross_amount
   - available_units must be on_hand_units minus reserved_units
   - order_status must be one of paid, pending, cancelled, returned
-

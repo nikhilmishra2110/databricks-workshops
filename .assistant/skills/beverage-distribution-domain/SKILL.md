@@ -1,15 +1,15 @@
 ---
-name: customer-domain-southern-glaciers
-description: Use when building synthetic beverage distribution workshop assets for Southern Glaciers account, product, inventory, promotion, and sales workflows.
+name: beverage-distribution-domain
+description: Use when building synthetic beverage distribution workshop assets for account, product, inventory, promotion, and sales workflows.
 ---
 
-# Customer Domain: Southern Glaciers
+# Customer Domain: Beverage Distribution
 
-Use this skill when the task involves the Southern Glaciers workshop domain.
+Use this skill when the task involves a beverage distribution workshop domain.
 
 ## Domain Rules
 
-- Treat Southern Glaciers as a synthetic beverage distribution customer for workshop purposes.
+- Treat the customer as a synthetic beverage distribution business for workshop purposes.
 - Never invent real customer data, people, addresses, emails, contracts, or credentials.
 - Use account, product, order, inventory, promotion, and rep note entities.
 - Keep examples small and explainable in a live workshop.
@@ -39,4 +39,3 @@ Field Sales Account Intelligence Copilot:
 - Add table and column comments.
 - Include edge cases for low inventory, pending orders, returns, and license review.
 - Clearly separate synthetic demo logic from production recommendations.
-

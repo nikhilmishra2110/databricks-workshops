@@ -1,4 +1,4 @@
-# Workshop Plan: Southern Glaciers GenAI MLOps On Databricks
+# Workshop Plan: Beverage Distribution GenAI MLOps On Databricks
 
 ## Summary
 
@@ -61,4 +61,3 @@ By the end, participants can:
 | Synthetic data is too generic | Use the domain contract in `assets/source-data-contract.yml` |
 | Genie space answers are weak | Improve table comments, column descriptions, business terms, and sample questions |
 | Time runs short | Skip app implementation and cover Lakebase as an architecture exercise |
-

@@ -6,7 +6,7 @@ Build a prompt-driven Databricks workflow for a synthetic beverage distributor.
 
 ## Scenario
 
-You support Southern Glaciers Beverage Distribution. Sales leaders want an account intelligence workflow that helps reps understand account health, reorder risk, promotion performance, and next best actions.
+You support a beverage distribution business. Sales leaders want an account intelligence workflow that helps reps understand account health, reorder risk, promotion performance, and next best actions.
 
 ## What You Will Create
 
@@ -34,4 +34,3 @@ You support Southern Glaciers Beverage Distribution. Sales leaders want an accou
 4. `exercises/04-create-optimize-genie-space.md`
 5. `exercises/05-mlflow-genai-mlops.md`
 6. `exercises/06-lakebase-app-pattern.md`
-

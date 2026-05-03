@@ -33,7 +33,7 @@ asset_types:
     description: Evaluation rubrics for workshops and learner submissions.
 
 starter_assets:
-  - path: workshops/southern-glaciers-genai-mlops/
+  - path: workshops/beverage-distributor-genai-mlops/
     type: workshop
   - path: prompts/curriculum-designer.md
     type: prompt

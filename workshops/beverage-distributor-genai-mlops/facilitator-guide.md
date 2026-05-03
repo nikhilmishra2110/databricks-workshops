@@ -2,7 +2,7 @@
 
 ## Before The Workshop
 
-- [ ] Confirm the customer name and whether "Southern Glaciers" should be changed.
+- [ ] Confirm the customer name and replace generic beverage distribution labels where appropriate.
 - [ ] Confirm workspace features: Genie Code, Genie spaces, Lakeflow, MLflow, Apps, Lakebase.
 - [ ] Decide whether Lakebase is hands-on or architecture-only.
 - [ ] Import or copy the skills in `.assistant/skills/`.
@@ -37,4 +37,3 @@ For each hands-on section:
 | Genie space answers are generic | Improve metadata and add sample questions |
 | Lakebase permissions are missing | switch to design-only exercise and capture required admin asks |
 | Participants want real data | Use synthetic data first, then discuss approved data onboarding |
-

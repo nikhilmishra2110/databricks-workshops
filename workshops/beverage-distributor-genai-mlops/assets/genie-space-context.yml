@@ -1,10 +1,10 @@
-space_name: SG Account Intelligence
+space_name: Beverage Account Intelligence
 purpose: Help sales leaders and reps ask trusted questions about account health, product performance, reorder risk, inventory availability, and promotions.
 
 trusted_tables:
-  - workshop.southern_glaciers.gold_account_intelligence
-  - workshop.southern_glaciers.silver_account_orders
-  - workshop.southern_glaciers.silver_inventory_position
+  - workshop.beverage_distribution.gold_account_intelligence
+  - workshop.beverage_distribution.silver_account_orders
+  - workshop.beverage_distribution.silver_inventory_position
 
 business_terms:
   account_health: Composite view of recent ordering, reorder cadence, inventory availability, and open follow-up actions.

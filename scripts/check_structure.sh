@@ -13,9 +13,9 @@ required_paths=(
   "checklists/pre-workshop.md"
   "rubrics/workshop-readiness.md"
   ".github/pull_request_template.md"
-  "workshops/southern-glaciers-genai-mlops/README.md"
-  "workshops/southern-glaciers-genai-mlops/prompts/prompt-pack.md"
-  "workshops/southern-glaciers-genai-mlops/assets/source-data-contract.yml"
+  "workshops/beverage-distributor-genai-mlops/README.md"
+  "workshops/beverage-distributor-genai-mlops/prompts/prompt-pack.md"
+  "workshops/beverage-distributor-genai-mlops/assets/source-data-contract.yml"
   ".assistant/skills/lakeflow-pipeline-builder/SKILL.md"
   ".assistant/skills/lakebase-app-builder/SKILL.md"
 )

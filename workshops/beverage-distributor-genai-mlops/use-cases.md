@@ -1,4 +1,4 @@
-# Use Cases For Southern Glaciers
+# Use Cases For Beverage Distribution
 
 These use cases are framed for a beverage distribution customer. Keep all workshop data synthetic unless the customer explicitly provides approved workshop data.
 
@@ -55,4 +55,3 @@ Keep the workshop focused on one end-to-end slice:
 - one Lakebase-backed app state model
 
 Do not try to build a full production sales system in the workshop.
-

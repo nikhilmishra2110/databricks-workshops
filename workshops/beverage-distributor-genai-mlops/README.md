@@ -1,12 +1,12 @@
-# Southern Glaciers GenAI MLOps Workshop
+# Beverage Distribution GenAI MLOps Workshop
 
-Customer: Southern Glaciers Beverage Distribution
+Domain: Beverage distribution
 
 Status: draft workshop package using synthetic data only.
 
 ## Workshop Thesis
 
-Give the customer a hands-on path for building governed GenAI and MLOps workflows in Databricks using prompts and Genie Code. Participants should leave with a working pattern they can reuse for their own account, product, inventory, promotion, and sales operations data.
+Give a customer team a hands-on path for building governed GenAI and MLOps workflows in Databricks using prompts and Genie Code. Participants should leave with a working pattern they can reuse for their own account, product, inventory, promotion, and sales operations data.
 
 ## Recommended Anchor Use Case
 
@@ -53,4 +53,3 @@ Why this is the right anchor:
 - `exercises/`: participant exercises
 - `assets/`: data contracts, table descriptions, sample Genie questions, and evaluation rubrics
 - `notebooks/`: optional starter notebooks for synthetic data and baseline modeling
-
