@@ -33,7 +33,9 @@ Check whether the workspace appears ready for:
 - MLflow experiment creation
 - Databricks Apps
 - Lakebase Autoscaling or Lakebase database resources
-- ability to copy or read `.assistant/skills`
+- ability to use prompts without custom skill installation
+- optional ability to copy or read `.assistant/skills`
+- optional ability to install Databricks AI Dev Kit skills if the environment supports Node/npm and external GitHub access
 
 Return a readiness report with:
 1. Green/yellow/red status for each capability.
@@ -41,7 +43,8 @@ Return a readiness report with:
 3. Whether the workshop can run hands-on, partially hands-on, or demo-only.
 4. The exact next folder to open.
 5. A fallback path from `99-backup` for any red item.
+6. Whether skillless prompt-only delivery is recommended.
+7. Whether AI Dev Kit skills are feasible or should be skipped.
 
 Wait for my approval before taking any action.
 ```
-

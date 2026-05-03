@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode while viewing or creating an MLflow experiment.
 
-Use skill: @mlflow-genai-evaluator
+Optional skill if available: @mlflow-genai-evaluator. If the skill is unavailable, continue with this prompt without blocking.
 
 You are in step 07 of the workshop: evaluate GenAI recommendations with MLflow.
 

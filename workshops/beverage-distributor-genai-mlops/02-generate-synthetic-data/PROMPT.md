@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode.
 
-Use skills: @beverage-distribution-domain and @lakehouse-data-generator
+Optional skills if available: @beverage-distribution-domain and @lakehouse-data-generator. If skills are unavailable, continue with this prompt without blocking.
 
 You are in step 02 of the workshop: generate synthetic data.
 

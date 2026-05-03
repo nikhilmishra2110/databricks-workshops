@@ -9,6 +9,8 @@ These instructions are for Databricks Genie Code when this repo is opened in a D
 - Wait for explicit human approval before creating, modifying, running, or deploying resources.
 - If the user asks for "plan mode", produce the plan, assumptions, required permissions, and exact next prompt without running anything.
 - If a step fails, do not improvise silently. Diagnose the error, explain the likely cause, and use the matching fallback in `workshops/beverage-distributor-genai-mlops/99-backup`.
+- Do not require custom skills to run the workshop. Treat skills as optional accelerators only.
+- If a prompt mentions a skill that is unavailable, continue using the prompt instructions directly.
 
 ## Workshop Rules
 
@@ -18,6 +20,8 @@ These instructions are for Databricks Genie Code when this repo is opened in a D
 - Use Unity Catalog three-part names.
 - Prefer business-readable table, column, metric, and Genie space descriptions.
 - Keep generated code workshop-sized and easy to explain.
+- Prefer Databricks Python SDK for control-plane automation in backup notebooks.
+- For Databricks Apps + Lakebase, use the App resource model and injected Postgres environment variables for runtime database connections. Do not hardcode Lakebase credentials.
 
 ## Default Resources
 
@@ -26,4 +30,3 @@ These instructions are for Databricks Genie Code when this repo is opened in a D
 - Genie space: `Beverage Account Intelligence`
 - MLflow experiment: `/Shared/beverage_account_intelligence`
 - Lakebase project: `beverage-account-actions`
-

@@ -2,7 +2,7 @@
 
 This repo contains one low-effort, prompt-driven Databricks workshop.
 
-Participants move through numbered folders from start to finish. Every build step is driven by a detailed `PROMPT.md` intended for Databricks Genie Code Agent mode.
+Participants move through numbered folders from start to finish. Every build step is driven by a detailed `PROMPT.md` intended for Databricks Genie Code Agent mode. Custom skills are optional; prompts are self-contained so the workshop can run in constrained customer environments.
 
 Start here:
 
@@ -37,10 +37,10 @@ workshops/beverage-distributor-genai-mlops/
 ## Quick Start
 
 1. Clone this repo into Databricks Repos or a workspace Git folder.
-2. Copy `.assistant/skills/` to a Databricks skill location.
-3. Open `workshops/beverage-distributor-genai-mlops/README.md`.
-4. Run the numbered folders in order.
-5. Use Genie Code Agent mode for each `PROMPT.md`.
+2. Open `workshops/beverage-distributor-genai-mlops/README.md`.
+3. Run the numbered folders in order.
+4. Use Genie Code Agent mode for each `PROMPT.md`.
+5. Optional: install local skills or AI Dev Kit skills if the customer environment supports it.
 
 To validate the repo locally:
 
@@ -48,9 +48,9 @@ To validate the repo locally:
 ./scripts/check_structure.sh
 ```
 
-## Databricks Skill Setup
+## Optional Databricks Skill Setup
 
-Databricks Genie Code skills live in a `.assistant/skills/` directory inside a Databricks workspace or user folder. This repo includes starter skills under `.assistant/skills/` so they can be copied or synced into the appropriate Databricks location.
+Databricks Genie Code skills live in a `.assistant/skills/` directory inside a Databricks workspace or user folder. This repo includes starter skills under `.assistant/skills/`, but the workshop does not require them.
 
 Recommended workspace path:
 
@@ -73,3 +73,11 @@ Use case -> synthetic data -> Lakeflow pipeline -> metric view -> Genie space ->
 ```
 
 If a product feature or permission is missing, use `99-backup/`.
+
+## Backup Automation
+
+The backup folder includes Databricks notebook-style Python files designed to create the core objects in one path when a live prompt-driven step fails:
+
+```text
+workshops/beverage-distributor-genai-mlops/99-backup/notebooks/
+```

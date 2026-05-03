@@ -3,7 +3,7 @@
 ```text
 Use Genie space Agent mode if it is enabled for the Genie space. If Genie space Agent mode is not enabled, use standard Genie questions.
 
-Use skill: @business-scenario-synthesizer
+Optional skill if available: @business-scenario-synthesizer. If the skill is unavailable, continue with this prompt without blocking.
 
 You are in step 06 of the workshop: synthesize a realistic business-user scenario and run questions against the Genie space named:
 Beverage Account Intelligence

@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode in a Databricks App workspace or app folder.
 
-Use skills: @databricks-app-builder, @lakebase-app-builder, and @genie-space-optimizer
+Optional skills if available: @databricks-app-builder, @lakebase-app-builder, and @genie-space-optimizer. If skills are unavailable, continue with this prompt without blocking.
 
 You are in step 09 of the workshop: build the Databricks App.
 
@@ -39,6 +39,24 @@ The app should:
 9. Use environment variables injected by Databricks Apps resources.
 10. Include a demo mode that uses in-memory synthetic rows if Unity Catalog or Lakebase are unavailable.
 
+Implementation requirements:
+1. Generate `app.yaml` with a clear command for Streamlit, for example `streamlit run app.py`.
+2. Use `requirements.txt` with explicit dependencies:
+   - streamlit
+   - databricks-sdk
+   - databricks-sql-connector
+   - psycopg or psycopg[binary]
+   - pandas
+3. For Lakebase writes, use a Postgres client such as `psycopg` or SQLAlchemy with injected `PG*` environment variables from the Databricks App database resource.
+4. Do not use the Databricks SDK as the primary runtime path for inserting Lakebase app-state rows.
+5. Use `databricks.sdk.WorkspaceClient` only for Databricks workspace APIs, such as Genie conversation calls when a Genie space resource ID is injected.
+6. Include a helper function that detects Lakebase readiness by checking required `PG*` environment variables.
+7. Include a helper function that detects Genie readiness by checking a `GENIE_SPACE_ID`-style environment variable.
+8. Include comments that explain where the facilitator must add App resources:
+   - Lakebase database resource with Can connect and create
+   - Genie space resource
+   - SQL warehouse or configuration needed for Unity Catalog reads
+
 First return:
 - app plan
 - expected Databricks App resources
@@ -46,6 +64,7 @@ First return:
 - environment variables
 - security assumptions
 - fallback behavior
+- where SDK is used versus where Postgres client is used
 
 Wait for approval before creating or editing files.
 

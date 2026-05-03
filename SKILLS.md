@@ -1,8 +1,16 @@
-# Genie Code Skills
+# Optional Genie Code Skills
 
-The reusable Genie Code skills are in `.assistant/skills/`.
+The workshop does **not** require skill installation. Every numbered folder has a self-contained `PROMPT.md`.
 
-Copy that folder into Databricks:
+Use skills only if the customer environment already supports them or the facilitator wants to install them ahead of time.
+
+## Preferred Workshop Default
+
+Use the numbered `PROMPT.md` files directly in Genie Code Agent mode. This avoids customer setup issues across managed desktops, Windows, macOS, restricted networks, or workspaces where users cannot write to `.assistant/skills`.
+
+## Optional Local Skills In This Repo
+
+The reusable local skills are in `.assistant/skills/`. If you choose to use them, copy that folder into Databricks:
 
 ```text
 Workspace/.assistant/skills/
@@ -14,7 +22,31 @@ or:
 /Users/{username}/.assistant/skills/
 ```
 
-## Skills In This Repo
+## Optional Databricks And AI Dev Kit Skills
+
+Databricks documents multiple skill repositories. AI Dev Kit skills are especially relevant because they cover SQL analytics, ML evaluation, model serving, streaming, pipelines, Unity Catalog, Lakebase, apps, and more.
+
+Use these only as facilitator prep. Do not require participants to run installers during a customer workshop.
+
+Databricks agent skills via Skills CLI:
+
+```bash
+npx skills add databricks/databricks-agent-skills --list
+npx skills add databricks/databricks-agent-skills --skill databricks-apps --skill databricks-pipelines
+```
+
+AI Dev Kit skills via the AI Dev Kit installer, if a facilitator machine has bash, network access, and Databricks CLI configured:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/databricks-skills/install_skills.sh | bash -s -- --list
+curl -sSL https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/databricks-skills/install_skills.sh | bash -s -- --install-to-genie
+```
+
+Use AI Dev Kit skills as accelerators for Databricks development patterns, not as a hard workshop dependency. The workshop `PROMPT.md` files remain the source of truth.
+
+Reference: https://docs.databricks.com/gcp/en/agent-skills/
+
+## Local Skills In This Repo
 
 | Skill | Use It When |
 | --- | --- |

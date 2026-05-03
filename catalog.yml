@@ -18,7 +18,7 @@ asset_types:
     description: Skills that can be copied into Databricks Genie Code Agent mode.
   backup:
     path: workshops/beverage-distributor-genai-mlops/99-backup/
-    description: Fallback prompts and assets when a feature or permission is unavailable.
+    description: Fallback prompts, SQL, and notebook-style Python SDK automation when a feature or permission is unavailable.
 
 starter_assets:
   - path: workshops/beverage-distributor-genai-mlops/
@@ -43,6 +43,16 @@ starter_assets:
     type: one_shot_prompt
   - path: workshops/beverage-distributor-genai-mlops/09-build-app/PROMPT.md
     type: one_shot_prompt
+  - path: workshops/beverage-distributor-genai-mlops/99-backup/notebooks/00_run_all_backup.py
+    type: backup_notebook
+  - path: workshops/beverage-distributor-genai-mlops/99-backup/notebooks/01_create_lakehouse_assets.py
+    type: backup_notebook
+  - path: workshops/beverage-distributor-genai-mlops/99-backup/notebooks/02_create_mlflow_evaluation.py
+    type: backup_notebook
+  - path: workshops/beverage-distributor-genai-mlops/99-backup/notebooks/03_create_lakebase_with_sdk.py
+    type: backup_notebook
+  - path: workshops/beverage-distributor-genai-mlops/99-backup/notebooks/04_generate_app_files.py
+    type: backup_notebook
   - path: .assistant/skills/lakeflow-pipeline-builder/SKILL.md
     type: genie_code_skill
   - path: .assistant/skills/metric-view-builder/SKILL.md

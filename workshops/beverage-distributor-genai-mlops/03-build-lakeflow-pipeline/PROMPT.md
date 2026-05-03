@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode in the Lakeflow Pipelines Editor.
 
-Use skills: @beverage-distribution-domain and @lakeflow-pipeline-builder
+Optional skills if available: @beverage-distribution-domain and @lakeflow-pipeline-builder. If skills are unavailable, continue with this prompt without blocking.
 
 You are in step 03 of the workshop: build a Lakeflow Spark Declarative Pipeline.
 

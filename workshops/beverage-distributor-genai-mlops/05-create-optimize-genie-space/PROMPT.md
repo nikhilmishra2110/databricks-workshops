@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode.
 
-Use skills: @genie-space-optimizer and @metric-view-builder
+Optional skills if available: @genie-space-optimizer and @metric-view-builder. If skills are unavailable, continue with this prompt without blocking.
 
 You are in step 05 of the workshop: create and optimize a Genie space.
 

@@ -25,9 +25,17 @@ References:
 
 Skills live in `.assistant/skills/`. Each skill has its own folder and a required `SKILL.md` file with frontmatter. Workspace skills are under `Workspace/.assistant/skills/`; user skills are under `/Users/{username}/.assistant/skills/`.
 
-Workshop implication: this repo includes starter skills that can be copied into the Databricks workspace skill folder before the workshop.
+Workshop implication: skills are optional. Customer environments can make skill installation difficult, so every workshop prompt is self-contained. Use local skills or AI Dev Kit skills only when they are already available or easy to install.
 
 Reference: https://docs.databricks.com/gcp/en/genie-code/skills
+
+## AI Dev Kit Skills
+
+Databricks documents AI Dev Kit skills as a curated repository covering Databricks development patterns across SQL analytics, ML evaluation, model serving, streaming, pipelines, Unity Catalog, Lakebase, and apps.
+
+Workshop implication: AI Dev Kit can be used as an optional facilitator setup, but it is not required for participants. Use `PROMPT.md` files as the lowest-friction path.
+
+Reference: https://docs.databricks.com/gcp/en/agent-skills/
 
 ## Lakeflow Spark Declarative Pipelines
 
@@ -63,9 +71,9 @@ Reference: https://docs.databricks.com/aws/en/oltp/
 
 ## Databricks Apps With Genie And Lakebase
 
-Databricks Apps can add Genie spaces and Lakebase databases as app resources. Lakebase-backed resources inject Postgres connection details into the app environment.
+Databricks Apps can add Genie spaces and Lakebase databases as app resources. Lakebase-backed resources inject Postgres connection details into the app environment. At runtime, the app should connect to Lakebase using the injected Postgres environment variables and a Postgres client such as `psycopg` or SQLAlchemy. Use the Databricks SDK for control-plane automation and workspace APIs, not as the primary runtime path for writing app-state rows.
 
-Workshop implication: the app exercise can combine a Genie space resource for natural-language analytics and a Lakebase resource for persistent workflow state.
+Workshop implication: the app exercise should explicitly generate `app.yaml`, use App resources, read Genie resource IDs from environment variables, and connect to Lakebase through injected `PG*` environment variables. Databricks SDK can be used in setup notebooks to create Lakebase projects/roles where APIs are available.
 
 References:
 

@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode in a Databricks SQL editor or notebook.
 
-Use skill: @metric-view-builder
+Optional skill if available: @metric-view-builder. If the skill is unavailable, continue with this prompt without blocking.
 
 You are in step 04 of the workshop: create a Unity Catalog metric view.
 

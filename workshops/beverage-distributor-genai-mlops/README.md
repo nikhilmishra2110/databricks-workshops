@@ -2,7 +2,9 @@
 
 This is a sequenced, prompt-driven Databricks workshop.
 
-Use one folder at a time. Each folder contains a `PROMPT.md` that should be pasted into Databricks Genie Code Agent mode. Genie Code should plan first, then execute only after approval.
+Use one folder at a time. Each folder contains a self-contained `PROMPT.md` that should be pasted into Databricks Genie Code Agent mode. Genie Code should plan first, then execute only after approval.
+
+Custom skills are optional. If a skill mention fails, keep going with the prompt text.
 
 ## Use Case
 
@@ -50,3 +52,13 @@ For every step:
 7. Confirm the "Done When" checklist in that folder's `README.md`.
 
 If a permission or preview feature is missing, go to `99-backup`.
+
+## Backup Notebooks
+
+If the prompt-driven path is blocked, use:
+
+```text
+99-backup/notebooks/
+```
+
+Those notebook-style Python files are designed to create the core workshop assets with Databricks Python SDK, Spark SQL, and fallback SQL where possible.

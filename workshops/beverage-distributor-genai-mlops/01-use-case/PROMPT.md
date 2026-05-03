@@ -3,7 +3,7 @@
 ```text
 Use Genie Code Agent mode.
 
-Use skill: @beverage-distribution-domain
+Optional skill if available: @beverage-distribution-domain. If the skill is unavailable, continue with this prompt without blocking.
 
 You are helping me run a Databricks workshop. Start with exactly one use case:
 

@@ -9,6 +9,8 @@ dist/
 build/
 exports/
 tmp/
+__pycache__/
+*.pyc
 
 # Local databases and large workshop outputs
 *.db
@@ -21,4 +23,3 @@ tmp/
 .env
 .env.*
 !.env.example
-
