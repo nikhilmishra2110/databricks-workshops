@@ -6,9 +6,20 @@ These notes capture the product assumptions used by the workshop assets. Validat
 
 Genie Code is the Databricks context-aware assistant for notebooks, SQL, jobs, dashboards, files, Lakeflow, and MLflow. Agent mode can perform multi-step work with approval.
 
-Workshop implication: use prompts that ask Genie Code to plan, generate code, run cells or queries only after approval, inspect errors, and revise.
+Workshop implication: every workshop build step uses Genie Code Agent mode and asks for a plan before execution.
 
 Reference: https://docs.databricks.com/aws/en/genie-code/
+
+## Metric Views
+
+Unity Catalog metric views define governed business metrics in YAML and can be created with SQL using `CREATE OR REPLACE VIEW ... WITH METRICS LANGUAGE YAML AS $$`. They can be used by SQL, dashboards, Genie spaces, and alerts.
+
+Workshop implication: create the metric view after the Lakeflow gold table and before the Genie space so business definitions are centralized.
+
+References:
+
+- https://docs.databricks.com/aws/en/business-semantics/metric-views/create-edit
+- https://docs.databricks.com/aws/en/business-semantics/metric-views/yaml-reference
 
 ## Genie Code Skills
 
@@ -30,7 +41,7 @@ Reference: https://docs.databricks.com/aws/en/ldp/
 
 Genie spaces let business users ask natural-language questions against curated Unity Catalog tables and views. A space needs Unity Catalog data and an appropriate SQL warehouse.
 
-Workshop implication: optimize the space by improving table comments, column comments, business definitions, sample questions, and trusted semantic views.
+Workshop implication: optimize the space by including curated tables and the metric view, improving table comments, column comments, business definitions, and sample questions.
 
 Reference: https://docs.databricks.com/gcp/en/genie/set-up
 
@@ -60,4 +71,3 @@ References:
 
 - https://docs.databricks.com/aws/en/dev-tools/databricks-apps/genie
 - https://docs.databricks.com/aws/en/dev-tools/databricks-apps/lakebase
-

@@ -1,0 +1,72 @@
+catalog: workshop
+schema: beverage_distribution
+data_policy: synthetic_only
+
+entities:
+  accounts:
+    grain: one row per account
+    columns:
+      - account_id
+      - account_name
+      - account_segment
+      - region
+      - sales_rep_id
+      - license_status
+      - account_since_date
+  products:
+    grain: one row per product
+    columns:
+      - product_id
+      - product_name
+      - category
+      - brand_family
+      - package_size
+      - unit_price
+  orders:
+    grain: one row per order line
+    columns:
+      - order_id
+      - order_date
+      - account_id
+      - product_id
+      - quantity
+      - gross_amount
+      - net_amount
+      - order_status
+  inventory:
+    grain: one row per product, region, and date
+    columns:
+      - inventory_date
+      - product_id
+      - region
+      - on_hand_units
+      - reserved_units
+      - available_units
+  promotions:
+    grain: one row per promotion, product, and region
+    columns:
+      - promotion_id
+      - product_id
+      - region
+      - start_date
+      - end_date
+      - discount_pct
+      - promotion_type
+  rep_notes:
+    grain: one row per account note
+    columns:
+      - note_id
+      - account_id
+      - note_date
+      - note_text
+      - note_type
+
+required_edge_cases:
+  - low available inventory for at least one high-demand product
+  - account with active license and overdue reorder behavior
+  - account with license review status
+  - pending order
+  - returned order
+  - promotion that overlaps recent orders
+  - rep note that explains a recommended action
+

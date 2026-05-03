@@ -1,87 +1,52 @@
-# Databricks Workshops
+# Databricks GenAI MLOps Workshop
 
-Reusable assets for planning and running Databricks customer workshops, with an emphasis on prompt-driven development using Genie Code, Lakeflow pipelines, Genie spaces, MLflow, Databricks Apps, and Lakebase.
+This repo contains one low-effort, prompt-driven Databricks workshop.
 
-The first packaged workshop is:
+Participants move through numbered folders from start to finish. Every build step is driven by a detailed `PROMPT.md` intended for Databricks Genie Code Agent mode.
 
-- `workshops/beverage-distributor-genai-mlops/`: a customer-facing GenAI + MLOps workshop for a beverage distribution use case.
+Start here:
 
-This repo stores:
-
-- prompt packs for Genie Code, Databricks workshop planning, SQL coaching, schema review, Lakeflow pipeline creation, Genie space optimization, MLflow evaluation, and Lakebase app setup
-- `.assistant/skills/` examples for Genie Code Agent mode
-- workshop templates for agendas, facilitator guides, learner handouts, and exercises
-- reusable SQL datasets, setup scripts, and examples
-- checklists and rubrics for workshop readiness and learner evaluation
+```text
+workshops/beverage-distributor-genai-mlops/
+```
 
 ## Repository Map
 
 ```text
 .
-|-- .assistant/skills/        # Genie Code skill examples
-|-- prompts/                 # Reusable prompt cards
-|-- workshops/_template/      # Copy this folder for each new workshop
-|-- workshops/beverage.../    # Starter Databricks GenAI/MLOps workshop
-|-- examples/intro-sql/       # Starter workshop with sample SQL assets
-|-- docs/                     # Operating model and design guidance
-|-- checklists/               # Repeatable planning and publishing checklists
-|-- rubrics/                  # Evaluation rubrics
-|-- templates/                # Reusable markdown templates
-|-- scripts/                  # Lightweight repo validation helpers
-`-- .github/                 # GitHub issue and PR templates
+|-- AGENTS.md                         # Instructions auto-discovered by Genie Code
+|-- SKILLS.md                         # Human-readable skill index
+|-- .assistant/skills/                # Genie Code skills
+|-- workshops/beverage-distributor-genai-mlops/
+|   |-- 00-before-workshop/
+|   |-- 01-use-case/
+|   |-- 02-generate-synthetic-data/
+|   |-- 03-build-lakeflow-pipeline/
+|   |-- 04-create-metric-view/
+|   |-- 05-create-optimize-genie-space/
+|   |-- 06-business-scenarios/
+|   |-- 07-mlflow-genai-evaluation/
+|   |-- 08-create-lakebase/
+|   |-- 09-build-app/
+|   `-- 99-backup/
+|-- docs/databricks/                  # Product notes and links
+|-- scripts/                          # Repo validation
+`-- .github/                          # GitHub templates
 ```
 
 ## Quick Start
 
-1. Copy `workshops/_template` into a new folder:
+1. Clone this repo into Databricks Repos or a workspace Git folder.
+2. Copy `.assistant/skills/` to a Databricks skill location.
+3. Open `workshops/beverage-distributor-genai-mlops/README.md`.
+4. Run the numbered folders in order.
+5. Use Genie Code Agent mode for each `PROMPT.md`.
 
-   ```bash
-   cp -R workshops/_template workshops/your-workshop-name
-   ```
-
-2. Fill in the workshop plan:
-
-   - `workshops/your-workshop-name/workshop-plan.md`
-   - `workshops/your-workshop-name/agenda.md`
-   - `workshops/your-workshop-name/facilitator-guide.md`
-   - `workshops/your-workshop-name/learner-handout.md`
-
-3. Add prompts from `prompts/` into the workshop prompt pack.
-
-4. Add setup scripts, datasets, and exercises.
-
-5. Run the structure check:
-
-   ```bash
-   ./scripts/check_structure.sh
-   ```
-
-## Recommended GitHub Setup
-
-Suggested repository name:
-
-```text
-databricks-workshops
-```
-
-Suggested visibility:
-
-- private if prompts, datasets, or client-specific examples are sensitive
-- public if this is meant to be a shared open workshop library
-
-Suggested topics:
-
-```text
-database, sql, workshops, prompts, education, data-engineering
-```
-
-To create and push with the GitHub CLI:
+To validate the repo locally:
 
 ```bash
-gh repo create nikhilmishra2110/databricks-workshops --private --source=. --remote=origin --push
+./scripts/check_structure.sh
 ```
-
-Change `--private` to `--public` if you want the assets to be public.
 
 ## Databricks Skill Setup
 
@@ -99,36 +64,12 @@ Recommended user path:
 /Users/{username}/.assistant/skills/
 ```
 
-## Asset Naming
+## Workshop Outcome
 
-Use predictable names so assets are easy to find:
-
-```text
-YYYY-MM-topic-audience
-intro-sql-analysts
-postgres-performance-developers
-schema-design-product-teams
-```
-
-For prompts, use:
+Participants build one end-to-end pattern:
 
 ```text
-verb-object-role.md
-curriculum-designer.md
-schema-design-reviewer.md
-sql-debugging-coach.md
+Use case -> synthetic data -> Lakeflow pipeline -> metric view -> Genie space -> business Q&A scenarios -> MLflow evaluation -> Lakebase -> Databricks App
 ```
 
-## Contribution Flow
-
-1. Open an issue using the workshop asset request template.
-2. Create or update the relevant workshop, prompt, checklist, or rubric.
-3. Test examples locally when they include runnable SQL.
-4. Open a pull request using the checklist in `.github/pull_request_template.md`.
-
-## License
-
-Add a license before publishing externally. A common setup is:
-
-- MIT for scripts and code examples
-- CC BY 4.0 for written workshop content
+If a product feature or permission is missing, use `99-backup/`.

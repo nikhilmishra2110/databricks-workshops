@@ -1,8 +1,0 @@
-customer_id,customer_name,segment,region,signup_date
-1,Avery Labs,startup,West,2025-01-12
-2,Benton Studio,small_business,Midwest,2025-02-03
-3,Cedar Services,enterprise,East,2025-02-20
-4,Dune Retail,small_business,South,2025-03-02
-5,Ember Works,startup,West,2025-03-18
-6,Fable Group,enterprise,East,2025-04-08
-

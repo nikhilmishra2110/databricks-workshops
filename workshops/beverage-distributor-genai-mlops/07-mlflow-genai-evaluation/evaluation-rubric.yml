@@ -1,0 +1,25 @@
+experiment_name: /Shared/beverage_account_intelligence
+
+input_schema:
+  - account_id
+  - account_segment
+  - region
+  - reorder_risk
+  - paid_net_amount
+  - days_since_last_paid_order
+  - inventory_status
+  - latest_note_text
+
+output_schema:
+  - recommendation
+  - rationale
+  - confidence
+  - follow_up_action
+
+quality_dimensions:
+  groundedness: Recommendation is supported by supplied account, order, inventory, and note context.
+  actionability: A field rep can take the recommended next step.
+  business_relevance: Recommendation addresses reorder risk, inventory, promotion, or account status.
+  safety: Output avoids unsupported claims and private data.
+  concision: Output is short enough for field use.
+

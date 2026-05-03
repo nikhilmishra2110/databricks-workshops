@@ -1,0 +1,27 @@
+space_name: Beverage Account Intelligence
+audience:
+  - sales leader
+  - regional sales manager
+  - field sales rep
+
+trusted_assets:
+  - workshop.beverage_distribution.beverage_account_metrics
+  - workshop.beverage_distribution.gold_account_intelligence
+  - workshop.beverage_distribution.silver_account_orders
+  - workshop.beverage_distribution.silver_inventory_position
+
+business_terms:
+  account_health: Recent ordering, reorder risk, license status, promotion context, inventory context, and rep notes.
+  reorder_risk: Likelihood that an account needs follow-up because its ordering cadence has slowed or a blocking issue exists.
+  available_units: On-hand inventory minus reserved inventory.
+  paid_net_amount: Paid order amount after discounts and returns.
+  hold_account: Account that should not receive a normal next-best-action recommendation until a status issue is resolved.
+
+sample_questions:
+  - Which accounts need attention this week?
+  - Which sales reps have the most high-risk accounts?
+  - What regions have the highest paid net amount?
+  - Which accounts are high risk but have active promotions?
+  - Why should a rep contact a high-risk account?
+  - Which products have low available inventory in the West region?
+
