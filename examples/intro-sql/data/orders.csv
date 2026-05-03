@@ -1,0 +1,12 @@
+order_id,customer_id,order_date,product_category,order_amount,status
+101,1,2025-03-01,database,240.00,paid
+102,1,2025-03-15,analytics,120.00,paid
+103,2,2025-03-17,database,80.00,paid
+104,2,2025-04-01,support,50.00,refunded
+105,3,2025-04-03,database,700.00,paid
+106,3,2025-04-08,analytics,300.00,paid
+107,4,2025-04-11,support,65.00,paid
+108,5,2025-04-12,database,180.00,pending
+109,6,2025-04-14,analytics,450.00,paid
+110,6,2025-04-21,database,620.00,paid
+

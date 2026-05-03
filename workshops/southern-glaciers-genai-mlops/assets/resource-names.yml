@@ -1,0 +1,38 @@
+workspace:
+  cloud: aws
+  region: us-west-2
+
+unity_catalog:
+  catalog: workshop
+  schema: southern_glaciers
+  volume: raw_workshop_files
+
+tables:
+  bronze_accounts: bronze_accounts
+  bronze_products: bronze_products
+  bronze_orders: bronze_orders
+  bronze_inventory: bronze_inventory
+  bronze_promotions: bronze_promotions
+  bronze_rep_notes: bronze_rep_notes
+  silver_account_orders: silver_account_orders
+  silver_inventory_position: silver_inventory_position
+  gold_account_intelligence: gold_account_intelligence
+
+lakeflow:
+  pipeline_name: sg_account_intelligence_pipeline
+  target_schema: southern_glaciers
+
+genie:
+  space_name: SG Account Intelligence
+  warehouse: replace_with_sql_warehouse_name
+
+mlflow:
+  experiment_name: /Shared/sg_account_intelligence
+  registered_model_name: sg_reorder_risk
+
+lakebase:
+  project_name: sg-account-actions
+  branch_name: production
+  database_name: databricks_postgres
+  app_schema: account_actions
+

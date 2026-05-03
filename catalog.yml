@@ -1,0 +1,54 @@
+repo:
+  name: databricks-workshops
+  purpose: Reusable assets for Databricks customer workshops.
+  primary_audiences:
+    - analysts
+    - backend developers
+    - data engineers
+    - data scientists
+    - ml engineers
+    - product teams
+
+asset_types:
+  genie_code_skills:
+    path: .assistant/skills/
+    description: Skills that can be copied into Databricks Genie Code Agent mode.
+  prompts:
+    path: prompts/
+    description: Prompt cards for planning, facilitation, SQL help, Lakeflow, Genie spaces, MLflow, Lakebase, and retrospectives.
+  workshop_template:
+    path: workshops/_template/
+    description: Copyable structure for building a new workshop.
+  databricks_customer_workshops:
+    path: workshops/
+    description: Complete Databricks customer workshop packages.
+  examples:
+    path: examples/
+    description: Complete starter workshops and runnable SQL examples.
+  checklists:
+    path: checklists/
+    description: Repeatable planning, readiness, and publishing checks.
+  rubrics:
+    path: rubrics/
+    description: Evaluation rubrics for workshops and learner submissions.
+
+starter_assets:
+  - path: workshops/southern-glaciers-genai-mlops/
+    type: workshop
+  - path: prompts/curriculum-designer.md
+    type: prompt
+  - path: prompts/sql-debugging-coach.md
+    type: prompt
+  - path: prompts/databricks/genie-code-dataset-builder.md
+    type: prompt
+  - path: prompts/databricks/lakeflow-pipeline-builder.md
+    type: prompt
+  - path: prompts/databricks/genie-space-optimizer.md
+    type: prompt
+  - path: prompts/databricks/lakebase-app-builder.md
+    type: prompt
+  - path: prompts/schema-design-reviewer.md
+    type: prompt
+  - path: .assistant/skills/lakeflow-pipeline-builder/SKILL.md
+    type: genie_code_skill
+

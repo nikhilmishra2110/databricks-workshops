@@ -1,0 +1,30 @@
+space_name: SG Account Intelligence
+purpose: Help sales leaders and reps ask trusted questions about account health, product performance, reorder risk, inventory availability, and promotions.
+
+trusted_tables:
+  - workshop.southern_glaciers.gold_account_intelligence
+  - workshop.southern_glaciers.silver_account_orders
+  - workshop.southern_glaciers.silver_inventory_position
+
+business_terms:
+  account_health: Composite view of recent ordering, reorder cadence, inventory availability, and open follow-up actions.
+  reorder_risk: Likelihood that an account is overdue or close to missing its expected reorder window.
+  available_units: On-hand inventory minus reserved inventory.
+  net_amount: Revenue after discount or promotion adjustments.
+  promotion_lift: Difference between promoted sales and a comparable baseline.
+
+sample_questions:
+  - Which accounts in the West region are most likely to need follow-up this week?
+  - Which accounts have high reorder risk and open promotions?
+  - What product categories are growing fastest by account segment?
+  - Which products have strong demand but low available inventory?
+  - Summarize why account A-1007 should be contacted.
+  - Which promotions drove the highest net amount in the last 30 days?
+
+optimization_checks:
+  - Are table and column comments business-friendly?
+  - Are only trusted curated tables included?
+  - Are sample questions tied to the actual schema?
+  - Are ambiguous terms defined?
+  - Are sensitive columns excluded?
+

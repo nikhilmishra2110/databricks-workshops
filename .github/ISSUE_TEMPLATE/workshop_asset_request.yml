@@ -1,0 +1,46 @@
+name: Workshop asset request
+description: Request a reusable database workshop asset, prompt, exercise, or dataset.
+title: "[Asset Request]: "
+labels:
+  - asset-request
+body:
+  - type: dropdown
+    id: asset_type
+    attributes:
+      label: Asset type
+      options:
+        - Prompt
+        - Workshop plan
+        - Exercise
+        - Dataset
+        - SQL setup script
+        - Facilitator guide
+        - Rubric
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: audience
+    attributes:
+      label: Audience
+      placeholder: Analysts, backend developers, data engineers, product managers
+    validations:
+      required: true
+  - type: input
+    id: database
+    attributes:
+      label: Database or dialect
+      placeholder: PostgreSQL, MySQL, SQLite, SQL Server, Snowflake, BigQuery
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Learning outcome
+      description: What should participants be able to do after using this asset?
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Time limit, tooling, privacy, dataset, or environment constraints.
+

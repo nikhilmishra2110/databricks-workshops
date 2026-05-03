@@ -1,0 +1,26 @@
+name: Prompt improvement
+description: Suggest an improvement to an existing prompt card.
+title: "[Prompt]: "
+labels:
+  - prompt
+body:
+  - type: input
+    id: prompt_path
+    attributes:
+      label: Prompt path
+      placeholder: prompts/sql-debugging-coach.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is not working?
+      placeholder: The prompt produces output that is too long or misses dialect-specific syntax.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      placeholder: Add a dialect field and require corrected SQL plus a short explanation.
+

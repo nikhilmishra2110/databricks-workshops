@@ -1,0 +1,38 @@
+evaluation_goal: Compare GenAI recommendation quality for account next-best-action suggestions.
+
+inputs:
+  - account profile
+  - recent order metrics
+  - inventory availability
+  - promotion context
+  - rep notes summary
+
+outputs:
+  - recommendation
+  - rationale
+  - confidence
+  - follow_up_action
+
+quality_dimensions:
+  groundedness:
+    description: Recommendation is supported by provided account, order, inventory, and promotion data.
+    scale: 1-5
+  actionability:
+    description: Sales rep can take the recommended next step.
+    scale: 1-5
+  business_relevance:
+    description: Recommendation aligns to account health, reorder risk, or promotion opportunity.
+    scale: 1-5
+  safety:
+    description: Output avoids unsupported claims, sensitive data exposure, and policy issues.
+    scale: pass_fail
+  concision:
+    description: Output is short enough for field use.
+    scale: 1-5
+
+human_feedback_fields:
+  - accepted
+  - edited_recommendation
+  - reason_rejected
+  - rep_notes
+
